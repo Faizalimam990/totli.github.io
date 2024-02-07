@@ -142,32 +142,37 @@
     <h4 class="heading">Happy Purpose Day Totli 💕</h4>
     <div class="heart"></div>
     <p class="letter">
-      Dear Totli,<br><br>
+      Dear Totli,<br>
       Stop eating Carrot and food of 2 times at once otherwise you will remain a Bandariya Only.Anyway Complete naruto so I can tell you that i can be your Obito<br><br>
       Isn't The moon Lovely,Click accept or reject<br>
       Totli
     </p>
+    <p id="myModal" style="display: none; background-color: crimson; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white; border-radius: 10px; text-align: center; ">Accept kar hi Li na TOTLI</p>
     
-    <div class="button-container">
-      <button class="button accept-button" id="myModal" onclick="alert('Accept kar hi li Na')">Accept</button>
-      <button class="button reject-button" onclick="moveButton()">Reject</button>
-    </div>
-  </div>
-  <audio loop autoplay controls style="display:none;">
-    <source src="ily.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+<div class="button-container">
+  <button class="button accept-button"  onclick="openModal()">Accept</button>
+  <button class="button reject-button" onclick="moveButton()">Reject</button>
+</div>
+
+<audio loop autoplay controls style="display:none;">
+  <source src="ily.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
-  <script>
-    function openModal() {
-      const modal = document.getElementById('myModal');
-      modal.style.display = 'flex';
+<script>
+  function openModal() {
+    var x = document.getElementById("myModal");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
     }
+  }
+</script>
 
-    function moveButton() {
-      const button = document.querySelector('.reject-button');
-      button.style.animation = 'moveButton 2s forwards infinite';
-    }
+    
+
+    
   </script>
 </body>
 </html>
